@@ -49,34 +49,21 @@ Features: Calendar (day-of-week, month, cyclic encodings), trend features
 
 Model: XGBoost regressor + weekday baseline blend
 
-🔎 Anomaly Detection Method
+## 🔎 Anomaly Detection Method
 
-Anomalies are defined as significant spikes or dips compared to model expectations.
+Anomalies are defined as significant **spikes or dips** compared to model expectations.
 
-Formula:
+**Formula:**
 
-Anomaly Score
-=
-Actual
-−
-Expected
-Expected
-Anomaly Score=
-Expected
-Actual−Expected
-	​
+Anomaly Score = (Actual - Expected) / Expected
 
 
-Steps:
+**Steps:**
+1. Forecast daily calls using the trained model.  
+2. Compare with actual observed calls (from test data).  
+3. Compute **Anomaly Score** as percent deviation.  
+4. Rank days by absolute deviation.  
+5. Select **Top-5 largest spikes** and **Top-5 deepest dips**.  
+6. Add optional brief notes (e.g., Holiday, Storm, Data glitch).​
 
-Forecast daily calls using the trained model.
 
-Compare with actual observed calls (from test data).
-
-Compute Anomaly Score as percent deviation.
-
-Rank days by absolute deviation.
-
-Select Top-5 largest spikes and Top-5 deepest dips.
-
-Add optional brief notes (e.g., Holiday, Storm, Data glitch).
