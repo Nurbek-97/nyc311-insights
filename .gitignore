@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+.ipynb_checkpoints/
+
+# Virtual env
+.venv/
+
+# OS cruft
+.DS_Store
+
+# Data we should NOT push (organizers have these)
+data/train.csv
+data/test.csv
+
+# Optional caches/artifacts
+*.parquet
+*.feather
+*.log
