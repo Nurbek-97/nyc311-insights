@@ -1,0 +1,10 @@
+pandas==2.2.2
+numpy==1.26.4
+scikit-learn==1.5.1
+xgboost==2.0.3
+statsmodels==0.14.2
+holidays==0.55
+plotly==5.22.0
+streamlit==1.36.0
+pydeck==0.9.1
+jupyter==1.0.0
